@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import './Trips.css'; // Ensure you have appropriate styles in this file
+import './trips.css'; // Ensure you have appropriate styles in this file
 
 const Trips = () => {
   const [tripsData, setTripsData] = useState([]);
