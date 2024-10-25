@@ -52,23 +52,32 @@ const RecentTrips = () => {
     <div className="recent-trips-container">
       <div className="trips-content"> {/* Parent div for header and container */}
         <div className="trips-header">
-          <h2>Latest Trips</h2>
-          <h2 onClick={() => window.location.href = tripsDataUrl} className='see'>See All</h2>
+          <h4>Latest Trips</h4>
+          <h5 onClick={() => window.location.href = tripsDataUrl} className='see'>See all</h5>
         </div>
         
         <div className="trips-container">
-          <ol>
+          <ol className="trip-list">
             {recentTrips.map((trip) => (
-              <li key={trip.id}>
-                <strong>Pickup Location:</strong> {trip.pickup_location} <br />
+              <li key={trip.id} >
+               {trip.pickup_location}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span className='date'>{new Date(trip.request_date).toLocaleString('en-US', {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true
+        })}</span>
               </li>
             ))}
           </ol>
 
           <div className="destinations-card">
-            <h3>Top 3 Destinations</h3>
+            <h3 className='toper'>Top 3 Destinations</h3>
             <div className="chart-and-list">
-              <ResponsiveContainer width="100%" height={200}>
+              <ResponsiveContainer width="100%" height={300}>
                 <PieChart>
                   <Pie
                     data={topDestinations}
@@ -76,9 +85,11 @@ const RecentTrips = () => {
                     nameKey="location"
                     cx="50%"
                     cy="50%"
-                    outerRadius={60}
+                    innerRadius={70}  // Create a donut chart
+                    outerRadius={110}
                     fill="#8884d8"
-                    label
+                    labelLine={false}
+                    label={() => ''}
                   >
                     {topDestinations.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -90,8 +101,17 @@ const RecentTrips = () => {
 
               <div className="destination-list">
                 {topDestinations.map((destination, index) => (
-                  <div key={index}>
-                    {destination.location}: {destination.percentage}%
+                  <div key={index} className="destination-progress">
+                    <div className="destination-name">
+                      {destination.location}
+                    </div>
+                    <div className="progress-bar">
+                      <div 
+                        className="progress" 
+                        style={{ width: `${destination.percentage}%`, backgroundColor: COLORS[index % COLORS.length] }}
+                      />
+                    </div>
+                    <div className="percentage">{destination.percentage}%</div>
                   </div>
                 ))}
               </div>

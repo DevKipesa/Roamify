@@ -13,9 +13,11 @@
   .searchInput {
     flex: 1;
     padding: 10px;
-    max-width: 350px;
+    max-width: 450px;
+    border: none;
     /* border: 0.5px solid #ccc; */
-    border-radius: 5px;
+    border-radius: 10px;
+    color:#5a5a5a ;
     background-color: #232323;
   }
   
@@ -61,16 +63,27 @@
     display: flex;
     gap: 20px;
     
+    
   }
   
   .filterCard {
-    background-color: #151515;
+    /* background-color: #151515; */
     padding: 15px;
     border-radius: 15px;
     width: 200px;
     border: 1px solid #867AD2;
     color: #fff;
-
+    /* background-image: url('/animal.jpg'); 
+    background-size: cover;  */
+  }
+  .tripCard {
+    background-image: url('animal.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 8px; 
+    padding: 20px; 
+    color:#fff ;
+    margin: 10px; 
   }
   .filterCard input[type="radio"] {
     accent-color: #867AD2; 
@@ -86,7 +99,7 @@
   }
   .searchButtonContainer {
     margin-top: 40px;
-    margin-left: 100px;
+    margin-left: 150px;
   }
   
   .searchButton {
@@ -94,7 +107,7 @@
     color: white;
     padding: 10px 70px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
@@ -130,3 +143,275 @@
   .tripes{
     color: #fff;
   }
+  .backArrow {
+    cursor: pointer;
+    font-size: 24px;
+    color: #867AD2;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border: 2px solid #867AD2; /* Circle border */
+    border-radius: 50%; /* Makes the border round */
+    background-color: #151515; /* Background color of the circle */
+  }
+  
+  .backArrow:hover {
+    color: #7368bd;
+    border-color: #7368bd; /* Change border color on hover */
+  }
+  .tripsContainer {
+    padding: 20px;
+    /* font-family: Arial, sans-serif; */
+  }
+  
+  .filterHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .backArrow {
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .appliedFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  
+  .filterLabel {
+    display: flex;
+    align-items: center;
+    background-color: #232323;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid #867AD2;
+    color: #fff;
+  }
+  
+  .removeFilter {
+    background: none;
+    border: none;
+    font-size: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .tripes {
+    color: #666;
+  }
+  .tripTitle {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0 0 10px 0;
+  }
+  .tripreq,
+  .tripstate,
+  .trippick,
+  .triprate,
+  .tripoff,
+  .cost,
+  .duration,
+  .distance,
+  .model {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .triprate {
+    font-weight: bold;
+  }
+  .triprates{
+    margin-left: 10px;
+    margin-top: -3px;
+    font-size: 20px;
+  }
+  .cost {
+    color: #fff; 
+    margin-top: 30px;
+    font: bold;
+    font-size: larger;
+  }
+  
+  .duration {
+    color: #2980b9; /* Blue for duration */
+  }
+  .tripstate{
+    border-radius: 15px;
+    padding: 7px;
+    background-color: #72BF78;
+    color: #fff;
+    border: 1px solid #867AD2;
+  }
+  .tripstate.canceled {
+    background-color: #FF7777; 
+  }
+  
+  .model {
+    font-style: italic;
+  }
+  .triprate{
+   margin-left:150px;
+   margin-top: -30px;
+  }
+  .tripDetailsContainer {
+    padding: 20px;
+    background-color:#151515;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tripDetails {
+    display: flex;
+    /* align-items: flex-start; */
+    /* margin-bottom: 20px; */
+    justify-content: space-between;
+  }
+  /* .but{
+    margin-left: 200px;
+    margin-top: -70px;
+  } */
+  .three{
+    display: flex;
+    gap: 50px;
+  }
+  .butt{
+    background-color: #72BF78;
+    padding: 2px;
+    height: 30px;
+    color: #fff;
+    border-radius: 15px;
+    border: 1px solid #232323;
+    margin-top: 10px;
+  }
+  .triprated{
+    color: #DBBB8D;
+  }
+  .piceco{
+    display: flex;
+    gap: 50px;
+  }
+  .trippicke{
+    margin-top: 30px;
+  }
+  .tripImageContainer {
+    /* flex: 1; */
+    margin-right: 20px;
+  }
+  
+  .tripImage {
+    /* width: 150%; */
+    border-radius: 15px;
+    width: 90%;
+    height: 105%;
+  }
+  
+  .tripInfo {
+    flex: 2;
+  }
+  
+  .infoCardsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  
+  .carCard {
+    /* flex: 1; */
+    background-color: #151515;
+    border: 1px solid #867AD2;
+    border-radius: 20px;
+    padding: 15px;
+    width:70%;
+    /* margin-right: 10px; */
+  }
+  .driverCard{
+    /* flex: 1; */
+    background-color: #151515;
+    border: 1px solid #867AD2;
+    border-radius: 20px;
+    /* padding: 15px; */
+    margin-right: 50px;
+    width:30%;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+  }
+  
+  .driverCard:last-child,
+  .carCard:last-child {
+    margin-right: 0;
+  }
+  
+  .carInfo {
+    display: flex;
+    gap: 40px
+    ;
+  }
+  .driverInfo{
+    display: block;
+  }
+  
+  .driverImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    margin-left: 50px;
+    /* margin-right: 10px; */
+  }
+  .info{
+    text-align: center;
+  }
+  .names {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carImage{
+    border-radius: 20px;
+    height: 200px;
+  }
+  
+  .makeye{
+    display: flex;
+  }
+  .num{
+    display: flex;
+    gap: 5px;
+  }
+  
+  .carDetails {
+    flex: 1;
+  }
+  .driverDetails{
+    display: flex;
+    gap: 40px;
+    margin-left: 20px;
+  }
+  
+  .triprate {
+    color: #f39c12; /* Color for the star rating */
+  }
+  
+  .backButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaPlane, FaCog, FaMap } from 'react-icons/fa';
+import { GrAppsRounded } from "react-icons/gr";
 import './sidebar.css';
 
 const Sidebar = () => {
@@ -8,7 +9,7 @@ const Sidebar = () => {
     <div className="container">
       <div className="sidebarContainer">
         <div className="logoContainer">
-          <h1 className="logoText">RoaMify</h1>
+          <h1 className="logoText">TripFinder</h1>
         </div>
 
         <div className="navContainer">
@@ -19,7 +20,7 @@ const Sidebar = () => {
           </Link>
           <Link to="/trips" className="navItem">
             <div className="dot" />
-            <FaMap className="icon" />
+            <GrAppsRounded className="icon" />
             <span>Trip</span>
           </Link>
         </div>
@@ -35,7 +36,7 @@ const Sidebar = () => {
       </div>
 
       <div className="profileImageContainer">
-        <img src="/profile1.jpeg" alt="Profile" className="profileImage" />
+        <img src="/profile2.jpg" alt="Profile" className="profileImage" />
       </div>
     </div>
   );
