@@ -46,52 +46,56 @@ const RecentTrips = () => {
     fetchTrips();
   }, []);
 
-  const COLORS = ['#FF5733', '#33FF57', '#3357FF'];
+  const COLORS = ['#867AD2', '#FF7777', '#FFDAA3'];
 
   return (
-    <div>
-      <div className="trips-header">
-        <h2>Latest Trips</h2>
-        <h2 onClick={() => window.location.href = tripsDataUrl}>See All</h2>
-      </div>
-      
-      <div className="trips-container">
-        <ol>
-          {recentTrips.map((trip) => (
-            <li key={trip.id}>
-              <strong>Pickup Location:</strong> {trip.pickup_location} <br />
-            </li>
-          ))}
-        </ol>
-
-        <div className="destinations-card">
-          <h3>Top 3 Destinations</h3>
-          <ResponsiveContainer width="100%" height={200}>
-            <PieChart>
-              <Pie
-                data={topDestinations}
-                dataKey="value"
-                nameKey="location"
-                cx="50%"
-                cy="50%"
-                outerRadius={60}
-                fill="#8884d8"
-                label
-              >
-                {topDestinations.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
-
-          <div className="destination-list">
-            {topDestinations.map((destination, index) => (
-              <div key={index}>
-                {destination.location}: {destination.percentage}%
-              </div>
+    <div className="recent-trips-container">
+      <div className="trips-content"> {/* Parent div for header and container */}
+        <div className="trips-header">
+          <h2>Latest Trips</h2>
+          <h2 onClick={() => window.location.href = tripsDataUrl} className='see'>See All</h2>
+        </div>
+        
+        <div className="trips-container">
+          <ol>
+            {recentTrips.map((trip) => (
+              <li key={trip.id}>
+                <strong>Pickup Location:</strong> {trip.pickup_location} <br />
+              </li>
             ))}
+          </ol>
+
+          <div className="destinations-card">
+            <h3>Top 3 Destinations</h3>
+            <div className="chart-and-list">
+              <ResponsiveContainer width="100%" height={200}>
+                <PieChart>
+                  <Pie
+                    data={topDestinations}
+                    dataKey="value"
+                    nameKey="location"
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={60}
+                    fill="#8884d8"
+                    label
+                  >
+                    {topDestinations.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+
+              <div className="destination-list">
+                {topDestinations.map((destination, index) => (
+                  <div key={index}>
+                    {destination.location}: {destination.percentage}%
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

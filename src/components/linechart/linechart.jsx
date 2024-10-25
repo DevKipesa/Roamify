@@ -38,8 +38,8 @@ const TripsLineChart = () => {
   }, []);
 
   return (
-    <div style={{ padding: '15px' }}>
-      <h2 style={{ color: '#fff', marginBottom: '10px' }}>Trips Over Time</h2>
+    <div style={{ padding: '0px' }}>
+      <h2 style={{ color: '#fff', marginBottom: '0px' }}>Trips Over Time</h2>
       <div style={{ border: '1px solid #867AD2', padding: '15px', borderRadius: '20px', backgroundColor: '#151515' }}>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={monthlyTrips} margin={{ top: 10, right: 30, left: 20, bottom: 5 }}>

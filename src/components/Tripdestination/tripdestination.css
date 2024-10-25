@@ -1,13 +1,15 @@
-.recentTripsContainer {
+/* .recentTripsContainer {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
+    display: flex;
+    margin-right: 50px;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-  
+   */
   
   .recentTripsContainer h2 {
     text-align: center;
@@ -41,20 +43,24 @@
     /* margin-top: 20px; */
     margin-left: 30px;
     margin-bottom: 30px;
+    gap: 80px;
   }
   
   .destinations-card {
-    border: 1px solid #ccc;
+    border: 1px solid #867AD2;
     padding: 16px;
-    border-radius: 8px;
-    width: 30%;
-    height: 20%;
+    border-radius: 15px;
+    width: 40%;
+    color: #fff;
+    height: 15%;
     margin-left: 70px;
     margin-top: -50px;
   }
-  
-  .destination-list {
+  .chart-and-list{
     display: flex;
+  }
+  .destination-list {
+    /* display: flex; */
     flex-direction: column;
     margin-top: 10px;
   }
@@ -77,8 +83,12 @@
   }
   .trips-header {
     display: flex;
+    gap: 50px;
     align-items: center;
     color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    /* font-size: 1.2rem; */
+    margin-bottom:30px 30px 30px;
+  }
+  .see:hover{
+    color: #867AD2;
   }
