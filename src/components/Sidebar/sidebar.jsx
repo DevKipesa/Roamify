@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaPlane, FaCog, FaMap } from 'react-icons/fa';
-import './Sidebar.css';
+import './sidebar.css';
 
 const Sidebar = () => {
   return (
