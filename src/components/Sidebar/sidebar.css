@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+}
+
+.sidebarContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  justify-content: center;
+  height: 100vh;
+  width: 200px;
+  background-color:#151515;
+  padding: 20px;
+  border-right: 1.5px solid #867AD2;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 20px; 
+}
+
+.logoText {
+  color: #fff;
+  font-size: 24px;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #5a5a5a;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  /* transition: color 0.3s; */
+}
+
+.navItem:hover {
+  color: #867AD2;
+}
+
+.icon {
+  margin-right: 10px;
+  /* transition: color 0.3s; */
+}
+
+.navItem:hover .icon {
+  color: #867AD2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #867AD2;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: none;
+}
+
+.navItem:hover .dot {
+  display: block;
+}
+
+.bottomContainer {
+  margin-top: auto;
+  margin-bottom: 100px;
+}
+
+.horizontalLine {
+  border: none;
+  height: 1px;
+  background-color: #867AD2;
+  width: 250px;
+  margin-left: -30px;
+}
+
+.settingsItem {
+  margin-top: 5px;
+}
+
+.profileImageContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.profileImage:hover {
+  transform: scale(1.1);
+}

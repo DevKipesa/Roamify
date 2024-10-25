@@ -1,0 +1,13 @@
+.appLayout {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4; /* Example background color */
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 20px;
+}
